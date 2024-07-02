@@ -1,3 +1,7 @@
+@import url(https://fonts.bunny.net/css?family=aldrich:400);
+
+/* the design is terrible. what was i thinking? */
+
 *,
 *::before,
 *::after {
@@ -6,14 +10,18 @@
     padding: 0;
 }
 
+:root {
+    font-size: 1vw; /* i dont care */
+}
+
 body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     position: relative;
-    font-family: monospace;
-    font-weight: bold;
+    font-family: 'Aldrich', monospace;
     color: white;
+    background-color: black;
 }
 
 body > img {
@@ -27,19 +35,37 @@ body > img {
     position: relative;
     left: 50vw;
     background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.body-text > p {
+    margin-bottom: 24px;
 }
 
 .body-root > *,
 .body-root > *::after { 
     padding: 24px;
+    font-size: 1.2rem;
 }
 
 .form-root {
     background-color: rgb(146, 146, 146);
 }
 
+.form-root > p {
+    color: rgb(218, 255, 8);
+    font-weight: bold;
+    font-size: 32px;
+}
+
 .bottom {
     background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 50vw;
+    padding: 24px;
+    min-height: 100%;
+    font-size: 1.2rem;
 }
 
 .logo {
@@ -50,4 +76,61 @@ body > img {
     color: white;
     background-color: black;
     opacity: 0.6;
+    box-shadow: black 10px 5px 10px;
+    font-family: 'Aldrich';
+}
+
+button {
+    background-color: rgb(158, 65, 65);
+    color: white;
+    padding: 24px;
+    font-size: 1.2rem;
+    border-top-left-radius: 20%;
+    border-style: none;
+    margin-bottom: 18px;
+    box-shadow: 5px 5px 5px rgb(203, 224, 12);
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: rgb(126, 51, 51);
+}
+
+button:active {
+    background-color: rgb(179, 73, 73);
+}
+
+a {
+    color: rgb(158, 65, 65);
+}
+
+.put {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    margin-right: 125px;
+    border-color: #E5E7EB;
+}
+
+input:invalid:focus {
+    outline-color: crimson;
+}
+
+input:focus {
+    outline-color: cornflowerblue;
+    box-shadow: 2px 2px 2px rgb(59, 59, 59);
+}
+
+label {
+    margin-top: 25px;
+    color: rgb(207, 229, 235);
+}
+
+form > div {
+    display: flex;
 }
